@@ -28,7 +28,13 @@
       <% @restaurants.each do |restaurant| %>
       <tr>
         <td><%= restaurant.restaurant_name %></td>
-        <td><%= restaurant.dish.dish_name %></td>
+        <td>
+          <% if restaurant.dish.present? %>
+            <a href="/reservations/<%= restaurant.dish.id %>">
+              <%= restaurant.dish.dish_name %>
+            </a>
+          <% end %>
+        </td>
         <td><%= restaurant.neighborhood %></td>
         <td><%= restaurant.address %></td>
         <td>
