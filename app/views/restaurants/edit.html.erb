@@ -33,7 +33,7 @@
           Dish
         </label>
 
-        <input type="text" id="dish_id" name="dish_id" placeholder="Dish" class="form-control" value="<%= @restaurant.dish_id %>">
+        <%= select_tag(:dish_id, options_from_collection_for_select(Reservation.all, :id, :dish_name, @restaurant.dish_id), :class => "form-control") %>
       </div>
 
       <!-- Label and input for neighborhood -->
