@@ -19,7 +19,7 @@
       <% @restaurants.each do |restaurant| %>
       <tr>
         <td><%= restaurant.restaurant_name %></td>
-        <td><%= restaurant.dish_id %></td>
+        <td><%= restaurant.dish.dish_name %></td>
         <td><%= restaurant.neighborhood %></td>
         <td><%= restaurant.address %></td>
         <td>
